@@ -5,14 +5,14 @@ An template that can be used to provision an SQL Database Managed Instance, with
 
 ```
 $resourcegroup="user-hvcmgbbewgdj"
-$ocation="eastus"
-$managedInstance="williesqlmi"
+$location="eastus"
+$managedInstanceName="williesqlmi"
 $administratorLogin="willie"
 $administratorLoginPassword="t#7y43I052$Q2541^!D!"
 $virtualNetworkName="williesqlmivnet"
 $vCores="4"
 $storageSizeInGB="32"
-
+az deployment group create --resource-group $resourcegroup --template-file 20230254_arm_template.json --parameters location=$location managedInstanceName=$managedInstanceName administratorLogin=$administratorLogin administratorLoginPassword=$administratorLoginPassword virtualNetworkName=$virtualNetworkName vCores=$vCores storageSizeInGB=$storageSizeInGB
 ```
 
 ## ✍️ willie@williedeklerk.com
